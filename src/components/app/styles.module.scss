@@ -1,15 +1,15 @@
 @import "./../../sass/base/_reset.module.scss";
-@import "./../../sass/abstracts/_theme-colors.module.scss";
+@import "./../../sass/abstracts/_variables.module.scss";
 
 .app {
+    @extend 
     height: 695px;
     position: relative;
 
     .header {
-        @include themed() {
-            background: t($bg);
-            color: t($text-color);
-        }
+        
+        background: $bg;
+        color: $text-color;
         height: 60px;
         display: flex;
         align-items: center;

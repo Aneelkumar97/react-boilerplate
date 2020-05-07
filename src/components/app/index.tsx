@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import themeStyles from '../../sass/abstracts/_theme-colors.module.scss';
 import { IGamesContract } from '../../contracts/Games';
 import { IGame } from '../../concerns/Game';
 import { GamesProvider } from '../../providers/Games';
@@ -46,7 +47,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
 
     public render(): React.ReactElement<IAppProps> {
         const { games } = this.state;
-        return <div className={`${styles.app} theme--dark`}>
+        return <div className={`${styles.app} ${themeStyles.themeDark}`}>
             <header className={`${styles.header}`}>
                 <span className={`${styles.heading}`}>{`Games`}</span>
             </header>

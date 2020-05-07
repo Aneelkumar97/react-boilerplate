@@ -35,18 +35,18 @@ export default class App extends React.Component<IAppProps, IAppState> {
         });
     }
 
-    public componentDidMount() {
-        this.gamesProvider.get().then((games) => {
-            this.setState({
-                games,
-                isLoading: false
-            });
-        });
-    }
+    // public componentDidMount() {
+    //     this.gamesProvider.get().then((games) => {
+    //         this.setState({
+    //             games,
+    //             isLoading: false
+    //         });
+    //     });
+    // }
 
     public render(): React.ReactElement<IAppProps> {
         const { games } = this.state;
-        return <div className={`${styles.app}`}>
+        return <div className={`${styles.app} theme--dark`}>
             <header className={`${styles.header}`}>
                 <span className={`${styles.heading}`}>{`Games`}</span>
             </header>

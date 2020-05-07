@@ -1,10 +1,15 @@
-body {
-    margin: 0px;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
+@import "./../../sass/base/_reset.module.scss";
+@import "./../../sass/abstracts/_theme-colors.module.scss";
 
 .app {
+    height: 695px;
+    position: relative;
+
     .header {
+        @include themed() {
+            background: t($bg);
+            color: t($text-color);
+        }
         height: 60px;
         display: flex;
         align-items: center;

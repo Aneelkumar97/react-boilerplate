@@ -1,17 +1,39 @@
 .items {
     max-height: 500px;
-    flex-basis: 30%;
+    flex-wrap: wrap;
+    display: flex;
     overflow: auto;
-    border: 1px solid #c2c2c2;
-    
+
     .item {
-        height: 50px;
+        padding: 8px;
+        margin: 10px;
+        height: 80px;
+        width: 420px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        border-radius: 10px;
+        justify-content: left;
+        cursor: pointer;
+        background: var(--bg-card);
+        border: 1px solid var(--bg-card-border);
+        transition: 0.2s ease-in-out;
+
+        .previewImage {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: url("https://wallpaperaccess.com/full/1271967.jpg");
+            background-position: center;
+            background-size: 100%;
+        }
+        .detailsWrapper {
+            width: calc(100% - 120px);
+            margin-left: 5px;
+        }
     }
     .item:hover {
-        background: #f2f2f2;
-        cursor: pointer;
+        background: var(--bg-card-hover);
+        box-shadow: 2px 4px 4px 2px var(--border-color);
+        transform: scale(1.02);
     }
 }

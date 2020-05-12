@@ -9,7 +9,7 @@
     }
 
     .slider {
-        background-color: var(--theme-tertiary);
+        background-color: #c2c2c2;
         bottom: 0;
         cursor: pointer;
         left: 0;
@@ -20,7 +20,7 @@
     }
 
     .slider:before {
-        background-color: var(--theme-neutral-alt);
+        background-color: #fff;
         bottom: 3px;
         content: "";
         height: 19px;
@@ -31,7 +31,7 @@
     }
 
     input:checked + .slider {
-        background-color: var(--theme-secondary);
+        background-color: var(--theme-primary);
     }
 
     input:checked + .slider:before {

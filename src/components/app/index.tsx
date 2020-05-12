@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import themeStyles from '../../sass/abstracts/_theme_variables.module.scss';
+import themeStyles from '../../stylesheets/abstracts/_theme_variables.module.scss';
 import { IGamesContract } from '../../contracts/Games';
 import { GamesProvider } from '../../providers/Games';
 import { IGame } from '../../concerns/Game';

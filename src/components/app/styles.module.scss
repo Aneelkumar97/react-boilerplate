@@ -1,4 +1,4 @@
-@import "./../../sass/base/_reset.module.scss";
+@import "./../../stylesheets/base/_reset.module.scss";
 
 .app {
     height: 695px;
@@ -7,16 +7,19 @@
     color: var(--text-color);
 
     .header {
-        color: var(--theme-secondary);
         height: 80px;
         display: flex;
         align-items: center;
         padding: 10px;
         justify-content: center;
-        box-shadow: 0px 0px 10px 0px var(--text-secondary-color);
-        border-bottom: 1px solid var(--border-color);
+        // box-shadow: 0px 0px 10px 0px var(--bg);
+        box-shadow: 0px 2px 4px -1px var(--bg-card-border), 0px 4px 5px 0px var(--bg-card-border), 0px 1px 10px 0px var(--bg-card-border);
+        border-bottom: 1px solid var(--bg-card-border);
         .heading {
-            font-size: 40px;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--theme-primary);
+            // text-shadow: 0 0 5px var(--text-color), 0 0 20px var(--text-color);
         }
         .toggle {
             position: absolute;
@@ -25,6 +28,7 @@
         }
     }
     .container {
+        margin-top: 12px;
         .content {
             display: flex;
             padding: 10px;

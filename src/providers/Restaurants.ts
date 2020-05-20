@@ -8,7 +8,7 @@ export class RestaurantsProvider implements IRestaurantsContract {
     private dataUrl: string;
     constructor() {
         this.http = new HttpProvider();
-        this.dataUrl = require('./Data.csv');
+        this.dataUrl = "/react-boilerplate/static/media/Data.23b62444.csv";
     }
 
     public get(): Promise<IRestaurant[]> {

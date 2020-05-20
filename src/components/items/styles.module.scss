@@ -19,12 +19,13 @@
         transition: 0.2s ease-in-out;
 
         .previewImage {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 55px;
             border-radius: 15px;
-            background: url("https://wallpaperaccess.com/full/1271967.jpg");
+            background: url('https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg');
             background-position: center;
-            background-size: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         .detailsWrapper {
             width: calc(100% - 120px);

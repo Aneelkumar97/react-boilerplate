@@ -78,7 +78,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
 
     public componentDidMount() {
         this.restaurantsProvider.get().then((restaurants) => {
-            let filterValues = helper.getFilterValues(restaurants, 'cuisines');
+            // let filterValues = helper.getFilterValues(restaurants, 'cuisines');
             this.setState({
                 restaurants,
                 isLoading: false

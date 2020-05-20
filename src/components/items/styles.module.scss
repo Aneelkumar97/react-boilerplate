@@ -29,6 +29,10 @@
         .detailsWrapper {
             width: calc(100% - 120px);
             margin-left: 5px;
+            .title {
+                color: var(--theme-primary);
+                font-size: 18px;
+            }
         }
     }
     .item:hover {

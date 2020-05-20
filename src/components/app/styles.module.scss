@@ -6,6 +6,20 @@
     background-color: var(--bg);
     color: var(--text-color);
 
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+     
+    ::-webkit-scrollbar-track {
+        box-shadow: var(--scrollbar-track); 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: var(--scrollbar-thumb); 
+    }
+
     .header {
         height: 80px;
         display: flex;

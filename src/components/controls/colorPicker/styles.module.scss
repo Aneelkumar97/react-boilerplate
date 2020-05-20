@@ -1,0 +1,11 @@
+.colorPicker {
+    width: 80px;
+    height: 30px;
+    margin-left: 15px;
+    select {
+        outline: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+}

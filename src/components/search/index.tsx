@@ -1,9 +1,8 @@
 import React from 'react';
-import { TextField } from 'office-ui-fabric-react';
-// import SearchResults from './SearchResults';
+import styles from './styles.module.scss';
 
 export interface ISearchProps {
-    onCitySelect: (id: number) => void;
+    onSearch: (text: string) => void;
 }
 
 export interface ISearchState {
@@ -19,20 +18,26 @@ export default class Search extends React.Component<ISearchProps, ISearchState> 
         this.onInputChange = this.onInputChange.bind(this);
     }
 
-    private onInputChange(text: string | undefined) {
+    private onInputChange(text: string) {
         this.setState({
             searchText: text
         });
+        this.props.onSearch(text);
     }
 
     public render(): React.ReactElement<ISearchProps> {
         const { searchText } = this.state;
-        return <React.Fragment>
-            <TextField
-                onChange={(ev, val) => { debugger; this.onInputChange(val); }}
+        return <div
+            className={`${styles.search}`}
+        >
+            <input
+                placeholder={`Search`}
+                type={"text"}
+                onChange={(ev) => {
+                    this.onInputChange(ev.currentTarget.value);
+                }}
                 value={searchText}
             />
-            {/* <SearchResults searchText={searchText} onCitySelect={this.props.onCitySelect} /> */}
-        </React.Fragment>
+        </div>;
     }
 }

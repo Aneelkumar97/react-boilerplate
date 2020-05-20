@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { IGame } from './../../concerns/Game';
+import { IRestaurant } from './../../concerns/Restaurant';
 
-export const ItemDetails: React.SFC<{ game: IGame }> = (props) => {
+export const ItemDetails: React.SFC<{ restaurant: IRestaurant }> = (props) => {
     return <div className={`${styles.itemDetails}`}>
         {/* <div className={`${styles.field}`}>
             <div className={`${styles.label}`}>

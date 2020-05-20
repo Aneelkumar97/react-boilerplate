@@ -1,7 +1,7 @@
 import { IHttpContract } from "../contracts/Http";
 
 export class HttpProvider implements IHttpContract {
-    
+
     private getHeaders(): { [key: string]: string } {
         return {
             'Accept': 'text/json; application/json'
@@ -15,6 +15,10 @@ export class HttpProvider implements IHttpContract {
         }
         return fetch(url, {
             headers: requestHeaders
-        }).then((response) => response.json());
+        }).then(response => response.json());
+    }
+
+    public getFile(url: string): Promise<any> {
+        return fetch(url).then(response => response.text());
     }
 }

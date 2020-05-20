@@ -1,0 +1,19 @@
+.search {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+        width: 40%;
+        font-size: 20px;
+        border-radius: 30px;
+        height: 40px;
+        background-color: var(--bg);
+        border: 1px solid var(--bg-card-border);
+        color: var(--text-color);
+        padding: 5px 20px;
+    }
+    input:focus {
+        outline: none;
+    }
+}

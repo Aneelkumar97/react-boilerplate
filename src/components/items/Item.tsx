@@ -1,18 +1,23 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { IGame } from './../../concerns/Game';
+import { IRestaurant } from './../../concerns/Restaurant';
 
-export const Item: React.SFC<{ item: IGame, index: number, onItemClick: (index: number) => void }> = (props) => {
+export const Item: React.SFC<{ item: IRestaurant, index: number, onItemClick: (index: number) => void }> = (props) => {
     const { item, index, onItemClick } = props;
     return <div
         className={`${styles.item}`}
         onClick={() => onItemClick(index)}
     >
-        <img
+        <div
             className={`${styles.previewImage}`}
         />
         <div className={`${styles.detailsWrapper}`}>
-            {item.title}
+            <div className={`${styles.title}`}>
+                {item.name}
+            </div>
+            <div>
+                {`${item.cuisines.join(', ')}`}
+            </div>
         </div>
     </div>;
 };
